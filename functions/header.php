@@ -12,13 +12,28 @@ function get_head(){
 
 
 function simple_header(){
-    global $sitename;
+    global $sitename, $HarBesoegtSide2;
+    if(!isset($_SESSION)){
+        session_start();
+    }
     ?>
     <!--This is being loaded from simple_header();-->
     <div class="header">
         <div class="flex-box">
             <div>
                 <p><?php echo $sitename; ?></p>
+                <?php
+                if(isset($_SESSION['hasSession'])){
+                    ?>
+                    <p>User has a session</p>
+                    <?php
+                }
+                if(isset($HarBesoegtSide2)){
+                    ?>
+                    <p>Du er på side 2</p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="menu">
                     <ul>
@@ -39,6 +54,8 @@ function get_menu_items(){
 }
 
 function its_a_trap(){
+    get_head();
+    simple_header();
     ?>
     <p>This was a trap, you died :(</p>
     <?php

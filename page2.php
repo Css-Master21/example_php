@@ -1,2 +1,7 @@
 <?php
-its_a_trap();
+session_start();
+$_SESSION['hasSession'] = 'true';
+$HarBesoegtSide2 = 'true';
+get_head();
+simple_header();
+

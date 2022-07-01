@@ -1,4 +1,5 @@
 <?php
+session_start();
+session_destroy();
 get_head();
 simple_header();
-is_this_file_included();
