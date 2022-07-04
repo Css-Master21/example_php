@@ -4,4 +4,3 @@ $_SESSION['hasSession'] = 'true';
 $HarBesoegtSide2 = 'true';
 get_head();
 simple_header();
-

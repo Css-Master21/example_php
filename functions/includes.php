@@ -5,6 +5,7 @@ define('baseDir', dirname(dirname(__FILE__)));
 /* Her laver vi alle globale strings, som vi vil bruge i vores functioner */
 $sitename = 'Eksempel side';
 $headercss = '\css\header.css';
+$contentcss = '\css\content.css';
 
 
 /* Her inkludere vi ALLE de filer, hvis funktioner skal virke sitewide:
@@ -13,3 +14,4 @@ require_once('sti/til/filen.php'); - Hvis function filen ikke er tilstede eller 
 */
 require(baseDir.'\functions\header.php');
 require(baseDir.'\functions\is_this_file_included.php');
+require(baseDir.'\functions\content.php');
